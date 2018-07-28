@@ -2,10 +2,10 @@ module scenes {
     export class Play extends objects.Scene {
         // member variables
         private _plane:objects.Plane;
-        private _ocean:objects.Ocean;
+        private _space:objects.Space;
         private _island:objects.Island;
-        private _clouds:objects.Cloud[];
-        private _cloudNum:number;
+        private _rocks:objects.Rock[];
+        private _rockNum:number;
         
         public engineSound:createjs.AbstractSoundInstance;
 
@@ -17,9 +17,9 @@ module scenes {
         }
 
         // private methods
-        private _buildClouds():void {
-            for (let count = 0; count < this._cloudNum; count++) {
-                this._clouds.push(new objects.Cloud());
+        private _buildRocks():void {
+            for (let count = 0; count < this._rockNum; count++) {
+                this._rocks.push(new objects.Rock());
                 //this._clouds[count] = new objects.Cloud();
             }
         }
@@ -32,28 +32,28 @@ module scenes {
 
 
             this._plane = new objects.Plane();
-            this._ocean = new objects.Ocean();
+            this._space = new objects.Space();
             this._island = new objects.Island();
 
             // creates an empty array of type Cloud
-            this._clouds = new Array<objects.Cloud>();
-            this._cloudNum = 3;
+            this._rocks = new Array<objects.Rock>();
+            this._rockNum = 3;
 
-            this._buildClouds();
+            this._buildRocks();
            
             this.Main();
         }
 
         public Update():void {
             this._plane.Update();
-            this._ocean.Update();
+            this._space.Update();
             this._island.Update();
 
             managers.Collision.check(this._plane, this._island);
 
-            this._clouds.forEach(cloud => {
-                cloud.Update();
-                managers.Collision.check(this._plane, cloud);
+            this._rocks.forEach(Rock => {
+                Rock.Update();
+                managers.Collision.check(this._plane, Rock);
             });
             
         }
@@ -70,7 +70,7 @@ module scenes {
             console.log(`Starting - PLAY SCENE`);
 
             // adding the ocean to the scene
-            this.addChild(this._ocean);
+            this.addChild(this._space);
 
             // adding the island to the scene
             this.addChild(this._island);
@@ -78,9 +78,9 @@ module scenes {
             // adding the plane to the scene
             this.addChild(this._plane);
 
-            // adding the cloud to the scene
-            for (const cloud of this._clouds) {
-                this.addChild(cloud);
+            // adding the Rock to the scene
+            for (const Rock of this._rocks) {
+                this.addChild(Rock);
             }
         }
     }
