@@ -16,6 +16,7 @@
         {id: "ocean", src:"/Assets/images/ocean.gif"},
         {id: "space", src:"/Assets/images/space.jpg"},
         {id: "island", src:"/Assets/images/island.png"},
+        {id: "Fuel", src:"/Assets/images/Fuel.png"},
         {id: "cloud", src:"/Assets/images/cloud.png"},
         {id: "Rock", src:"/Assets/images/rock.png"},
         {id: "yay", src:"/Assets/audio/yay.ogg"},

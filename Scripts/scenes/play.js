@@ -22,7 +22,6 @@ var scenes;
         Play.prototype._buildRocks = function () {
             for (var count = 0; count < this._rockNum; count++) {
                 this._rocks.push(new objects.Rock());
-                //this._clouds[count] = new objects.Cloud();
             }
         };
         // public methods
@@ -32,7 +31,7 @@ var scenes;
             this.engineSound.volume = 0.1;
             this._plane = new objects.Plane();
             this._space = new objects.Space();
-            this._island = new objects.Island();
+            this._fuel = new objects.Fuel();
             // creates an empty array of type Cloud
             this._rocks = new Array();
             this._rockNum = 3;
@@ -43,8 +42,8 @@ var scenes;
             var _this = this;
             this._plane.Update();
             this._space.Update();
-            this._island.Update();
-            managers.Collision.check(this._plane, this._island);
+            this._fuel.Update();
+            managers.Collision.check(this._plane, this._fuel);
             this._rocks.forEach(function (Rock) {
                 Rock.Update();
                 managers.Collision.check(_this._plane, Rock);
@@ -57,10 +56,10 @@ var scenes;
         };
         Play.prototype.Main = function () {
             console.log("Starting - PLAY SCENE");
-            // adding the ocean to the scene
+            // adding the space to the scene
             this.addChild(this._space);
-            // adding the island to the scene
-            this.addChild(this._island);
+            // adding the fuel to the scene
+            this.addChild(this._fuel);
             // adding the plane to the scene
             this.addChild(this._plane);
             // adding the Rock to the scene
