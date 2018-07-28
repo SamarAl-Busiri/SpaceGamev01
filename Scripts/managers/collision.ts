@@ -12,12 +12,12 @@ namespace managers {
           object2.isColliding = true;
             switch(object2.name) {
                 case "Fuel":
-                let yaySound = createjs.Sound.play("yay");
+                let yaySound = createjs.Sound.play("life");
                 yaySound.volume = 0.2;
                 break;
 
                 case "Rock":
-                let thunderSound = createjs.Sound.play("thunder");
+                let thunderSound = createjs.Sound.play("explosion");
                 thunderSound.volume = 0.2;
                 break;
             }

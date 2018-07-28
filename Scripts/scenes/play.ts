@@ -7,7 +7,7 @@ module scenes {
         private _rocks:objects.Rock[];
         private _rockNum:number;
         
-        public engineSound:createjs.AbstractSoundInstance;
+        public fantasySound:createjs.AbstractSoundInstance;
 
         // constructors
         constructor() {
@@ -26,9 +26,9 @@ module scenes {
 
         // public methods
         public Start():void {
-            this.engineSound = createjs.Sound.play("engine");
-            this.engineSound.loop = -1;
-            this.engineSound.volume = 0.1;
+            this.fantasySound = createjs.Sound.play("fantasy");
+            this.fantasySound.loop = -1;
+            this.fantasySound.volume = 0.5;
 
 
             this._plane = new objects.Plane();

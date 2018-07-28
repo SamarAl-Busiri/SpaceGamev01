@@ -18,9 +18,9 @@
         { id: "Fuel", src: "/Assets/images/Fuel.png" },
         { id: "cloud", src: "/Assets/images/cloud.png" },
         { id: "Rock", src: "/Assets/images/rock.png" },
-        { id: "yay", src: "/Assets/audio/yay.ogg" },
-        { id: "thunder", src: "/Assets/audio/thunder.ogg" },
-        { id: "engine", src: "/Assets/audio/engine.ogg" }
+        { id: "life", src: "/Assets/audio/life.wav" },
+        { id: "explosion", src: "/Assets/audio/explosion.mp3" },
+        { id: "fantasy", src: "/Assets/audio/fantasy.ogg" }
     ];
     function Init() {
         console.log("%c Assets Loading...", "font-weight:bold; font-size:20px; color: green;");

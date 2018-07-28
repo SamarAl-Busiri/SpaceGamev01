@@ -26,9 +26,9 @@ var scenes;
         };
         // public methods
         Play.prototype.Start = function () {
-            this.engineSound = createjs.Sound.play("engine");
-            this.engineSound.loop = -1;
-            this.engineSound.volume = 0.1;
+            this.fantasySound = createjs.Sound.play("fantasy");
+            this.fantasySound.loop = -1;
+            this.fantasySound.volume = 0.5;
             this._plane = new objects.Plane();
             this._space = new objects.Space();
             this._fuel = new objects.Fuel();

@@ -11,11 +11,11 @@ var managers;
                     object2.isColliding = true;
                     switch (object2.name) {
                         case "Fuel":
-                            var yaySound = createjs.Sound.play("yay");
+                            var yaySound = createjs.Sound.play("life");
                             yaySound.volume = 0.2;
                             break;
                         case "Rock":
-                            var thunderSound = createjs.Sound.play("thunder");
+                            var thunderSound = createjs.Sound.play("explosion");
                             thunderSound.volume = 0.2;
                             break;
                     }
