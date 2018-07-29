@@ -7,6 +7,8 @@ module scenes {
         private _rocks:objects.Rock[];
         private _rockNum:number;
         
+        
+        
         public fantasySound:createjs.AbstractSoundInstance;
 
         // constructors
@@ -30,10 +32,12 @@ module scenes {
             this.fantasySound.loop = -1;
             this.fantasySound.volume = 0.5;
 
-
+           
             this._plane = new objects.Plane();
             this._space = new objects.Space();
             this._fuel = new objects.Fuel();
+            
+            
 
             // creates an empty array of type Cloud
             this._rocks = new Array<objects.Rock>();
@@ -48,6 +52,7 @@ module scenes {
             this._plane.Update();
             this._space.Update();
             this._fuel.Update();
+           
 
             managers.Collision.check(this._plane, this._fuel);
 
@@ -69,6 +74,7 @@ module scenes {
         public Main():void {
             console.log(`Starting - PLAY SCENE`);
 
+            
             // adding the space to the scene
             this.addChild(this._space);
 
