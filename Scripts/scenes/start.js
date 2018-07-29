@@ -21,7 +21,7 @@ var scenes;
         // private methods
         // public methods
         Start.prototype.Start = function () {
-            this._welcomeLabel = new objects.Label("Welcome!", "60px", "Consolas", "#000000", 320, 180, true);
+            this._welcomeLabel = new objects.Label("Space Game", "60px", "Consolas", "#000000", 320, 180, true);
             this._startButton = new objects.Button("StartButton", 320, 280, true);
             this._InstructionButton = new objects.Button("InstructionButton", 320, 340, true);
             this._ExitButton = new objects.Button("ExitButton", 320, 400, true);
@@ -44,7 +44,7 @@ var scenes;
                 managers.Game.CurrentState = config.Scene.PLAY;
             }, this);
             this._InstructionButton.on("click", function () {
-                managers.Game.CurrentState = config.Scene.PLAY;
+                managers.Game.CurrentState = config.Scene.INSTRUCTION;
             }, this);
             this._ExitButton.on("click", function () {
                 managers.Game.CurrentState = config.Scene.PLAY;

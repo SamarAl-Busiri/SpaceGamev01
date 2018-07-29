@@ -80,6 +80,10 @@
             CurrentScene = new scenes.Play();
             break;
 
+            case config.Scene.INSTRUCTION:
+            CurrentScene = new scenes.Instruction();
+            break;
+            
             case config.Scene.END:
             CurrentScene = new scenes.End();
             break;
