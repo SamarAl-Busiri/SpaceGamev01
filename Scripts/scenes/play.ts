@@ -6,6 +6,7 @@ module scenes {
         private _fuel:objects.Fuel;
         private _rocks:objects.Rock[];
         private _rockNum:number;
+        private _scoreBoard: managers.ScoreBoard;
         
         
         
@@ -44,6 +45,11 @@ module scenes {
             this._rockNum = 3;
 
             this._buildRocks();
+
+            // create the scoreboard UI for the Scene
+            this._scoreBoard = new managers.ScoreBoard();
+            managers.Game.scoreBoard = this._scoreBoard;
+
            
             this.Main();
         }
@@ -87,6 +93,9 @@ module scenes {
             // adding the Rock to the scene
             for (const Rock of this._rocks) {
                 this.addChild(Rock);
+
+            this.addChild(this._scoreBoard.LivesLabel);
+            this.addChild(this._scoreBoard.ScoreLabel);
             }
         }
     }

@@ -36,6 +36,9 @@ var scenes;
             this._rocks = new Array();
             this._rockNum = 3;
             this._buildRocks();
+            // create the scoreboard UI for the Scene
+            this._scoreBoard = new managers.ScoreBoard();
+            managers.Game.scoreBoard = this._scoreBoard;
             this.Main();
         };
         Play.prototype.Update = function () {
@@ -66,6 +69,8 @@ var scenes;
             for (var _i = 0, _a = this._rocks; _i < _a.length; _i++) {
                 var Rock = _a[_i];
                 this.addChild(Rock);
+                this.addChild(this._scoreBoard.LivesLabel);
+                this.addChild(this._scoreBoard.ScoreLabel);
             }
         };
         return Play;
