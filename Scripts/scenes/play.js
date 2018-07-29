@@ -51,6 +51,11 @@ var scenes;
                 Rock.Update();
                 managers.Collision.check(_this._plane, Rock);
             });
+            // if lives fall below zero switch scenes to the game over scene
+            if (this._scoreBoard.Lives <= 0) {
+                this.fantasySound.stop();
+                managers.Game.CurrentState = config.Scene.OVER;
+            }
         };
         Play.prototype.Reset = function () {
         };

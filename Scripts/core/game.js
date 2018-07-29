@@ -11,6 +11,7 @@
         { id: "StartButton", src: "/Assets/images/StartButton.png" },
         { id: "InstructionButton", src: "/Assets/images/InstructionButton.png" },
         { id: "ExitButton", src: "/Assets/images/ExitButton.png" },
+        { id: "restartButton", src: "/Assets/images/restartButton.png" },
         { id: "plane", src: "/Assets/images/plane.png" },
         { id: "space", src: "/Assets/images/space.jpg" },
         { id: "Fuel", src: "/Assets/images/Fuel.png" },
@@ -63,6 +64,9 @@
                 break;
             case config.Scene.INSTRUCTION:
                 CurrentScene = new scenes.Instruction();
+                break;
+            case config.Scene.OVER:
+                CurrentScene = new scenes.Over();
                 break;
             case config.Scene.END:
                 CurrentScene = new scenes.End();

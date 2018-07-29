@@ -14,11 +14,17 @@ namespace managers {
                 case "Fuel":
                 let yaySound = createjs.Sound.play("life");
                 yaySound.volume = 0.2;
+                managers.Game.scoreBoard.Score += 100;
+                if(managers.Game.HighScore <= managers.Game.scoreBoard.Score) {
+                  managers.Game.scoreBoard.HighScore = managers.Game.scoreBoard.Score;
+                  managers.Game.HighScore = managers.Game.scoreBoard.HighScore;
+                }
                 break;
 
                 case "Rock":
                 let thunderSound = createjs.Sound.play("explosion");
                 thunderSound.volume = 0.2;
+                managers.Game.scoreBoard.Lives -= 1
                 break;
             }
 

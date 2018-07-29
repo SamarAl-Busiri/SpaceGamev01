@@ -65,8 +65,16 @@ module scenes {
             this._rocks.forEach(Rock => {
                 Rock.Update();
                 managers.Collision.check(this._plane, Rock);
+                
             });
-            
+            // if lives fall below zero switch scenes to the game over scene
+            if(this._scoreBoard.Lives <= 0) {
+                this.fantasySound.stop();
+                managers.Game.CurrentState = config.Scene.OVER;
+                
+                
+            }
+
         }
 
         public Reset():void {

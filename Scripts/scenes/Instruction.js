@@ -36,7 +36,7 @@ var scenes;
             this.removeAllChildren();
         };
         Instruction.prototype.Main = function () {
-            console.log("Starting - START SCENE");
+            console.log("Starting - INSTRUCTION SCENE");
             this.addChild(this._InstructionLabel);
             this.addChild(this._InstructionLabel1);
             this.addChild(this._InstructionLabel2);

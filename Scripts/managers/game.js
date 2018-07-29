@@ -3,6 +3,7 @@ var managers;
     var Game = /** @class */ (function () {
         function Game() {
         }
+        Game.HighScore = 0;
         return Game;
     }());
     managers.Game = Game;

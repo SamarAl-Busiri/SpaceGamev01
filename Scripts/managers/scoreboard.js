@@ -44,7 +44,7 @@ var managers;
             this.LivesLabel = new objects.Label("Lives: 0", "20px", "Dock51", "#FFFF00", 10, 10, false);
             this.ScoreLabel = new objects.Label("Score: 99999", "20px", "Dock51", "#FFFF00", 500, 10, false);
             this.HighScoreLabel = new objects.Label("High Score: 99999", "40px", "Dock51", "#FFFF00", 320, 240, true);
-            this.Lives = 5;
+            this.Lives = 10;
             this.Score = 0;
             this.HighScore = 0;
         };

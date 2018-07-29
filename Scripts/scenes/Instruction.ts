@@ -42,7 +42,7 @@ module scenes {
         }
 
         public Main():void {
-            console.log(`Starting - START SCENE`);
+            console.log(`Starting - INSTRUCTION SCENE`);
             this.addChild(this._InstructionLabel);
             this.addChild(this._InstructionLabel1);
             this.addChild(this._InstructionLabel2);

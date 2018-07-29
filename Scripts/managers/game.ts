@@ -5,5 +5,6 @@ module managers {
         public static CurrentState:config.Scene;
         public static Stage:createjs.Stage;
         public static scoreBoard: managers.ScoreBoard;
+        public static HighScore: number = 0;
     }
 }
