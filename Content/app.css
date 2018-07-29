@@ -4,6 +4,6 @@ body {
 
 #canvas {
     border: 1px black dotted;
-    background-color: white;
+    background-color: rgba(167, 247, 19, 0.788);
     border-radius: 1%;
 }

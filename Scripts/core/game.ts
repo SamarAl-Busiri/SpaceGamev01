@@ -34,7 +34,8 @@
 
     function Start():void {
         console.log(`%c Game Initializing...`,"font-weight:bold; font-size:20px; color: red;");
-        canvas = document.getElementsByTagName("canvas")[0];
+         canvas = document.getElementsByTagName("canvas")[0];
+        
         stage = new createjs.Stage(canvas);
 
         managers.Game.Stage = stage; // create a reference to the stage class
