@@ -47,7 +47,7 @@ var scenes;
                 managers.Game.CurrentState = config.Scene.INSTRUCTION;
             }, this);
             this._ExitButton.on("click", function () {
-                managers.Game.CurrentState = config.Scene.PLAY;
+                managers.Game.CurrentState = config.Scene.END;
             }, this);
         };
         return Start;
